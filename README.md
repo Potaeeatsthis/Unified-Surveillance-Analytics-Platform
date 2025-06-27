@@ -32,6 +32,6 @@ This repository contains the core logic for the computer vision modules. Looking
 * `people.py`: The script responsible for person detection and identification.
 * `crowd.py`: Handles the logic for crowd density analysis and heatmap generation.
 
-Each module is designed to be self-contained with its own Dockerfile (`*.Dockerfile`), environment variables (`*.env`), and Python requirements (`*.requirements.txt`), making it easy to build and deploy.
+Each module is designed to be self-contained with its own Dockerfile (`*.Dockerfile`), environment variables (`*.env`), and Python requirements (`*.requirements`), making it easy to build and deploy.
 
 Thank you for checking out this project!
