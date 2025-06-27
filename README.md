@@ -31,36 +31,7 @@ This repository contains the core logic for the computer vision modules. Looking
 * `vehicle.py`: The main script for vehicle detection and recognition.
 * `people.py`: The script responsible for person detection and identification.
 * `crowd.py`: Handles the logic for crowd density analysis and heatmap generation.
-* `multi-vehicle.py`: Likely an enhanced or multi-camera script for the vehicle system.
 
 Each module is designed to be self-contained with its own Dockerfile (`*.Dockerfile`), environment variables (`*.env`), and Python requirements (`*.requirements.txt`), making it easy to build and deploy.
-
-### Getting Started
-
-This project is containerized using Docker for simplified setup and deployment.
-
-1.  **Build the Docker Images:**
-    The `build.sh` script can be used to build the necessary Docker images for each service.
-    ```sh
-    ./build.sh
-    ```
-
-2.  **Configure Environment Variables:**
-    Update the `.env` files for each module (`vehicle.env`, `people.env`, `crowd.env`) with the necessary configurations, such as camera stream URLs, API keys, or database credentials.
-
-3.  **Run the Services:**
-    Once built, you can run each service as a Docker container. For example, to run the vehicle detection service:
-    ```sh
-    docker run --rm --env-file vehicle.env vehicle-service:latest
-    ```
-    *(Note: You might use Docker Compose in a full production setup to manage these services together.)*
-
-## Future Improvements
-
-While the system is functional, there's always room for growth. The most challenging part of this project was designing the core logic, and I'm keen to make it even better. My future goals for this project include:
-
-* **Optimizing the Logic:** Refactoring the core detection and tracking logic for greater efficiency and accuracy.
-* **Improving Scalability:** Implementing a more robust multi-camera handling system and potentially using a message queue (like RabbitMQ or Kafka) for inter-service communication.
-* **Advanced Analytics:** Expanding the density analysis to provide predictive insights, such as forecasting peak crowd times.
 
 Thank you for checking out this project!
